@@ -1,0 +1,4 @@
+| name       | usn        | password | branch | semester |
+| ---------- | ---------- | -------- | ------ | -------- |
+| John Doe   | 1RV19CS001 | pass123  | CS     | 5        |
+| Jane Smith | 1RV19EC002 | pass456  | EC     | 3        |

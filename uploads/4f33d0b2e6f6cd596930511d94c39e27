@@ -1,0 +1,15 @@
+name,id_no,password,branch
+Prof. Smith,CSE-T1,exam123,CSE
+Prof. Johnson,CSE-T2,exam123,CSE
+Prof. Williams,ISE-T1,exam123,ISE
+Prof. Brown,ISE-T2,exam123,ISE
+Prof. Jones,ECE-T1,exam123,ECE
+Prof. Miller,ECE-T2,exam123,ECE
+Prof. Davis,EEE-T1,exam123,EEE
+Prof. Garcia,EEE-T2,exam123,EEE
+Prof. Martinez,CIVIL-T1,exam123,CIVIL
+Prof. Rodriguez,CIVIL-T2,exam123,CIVIL
+Prof. Wilson,MECH-T1,exam123,MECH
+Prof. Anderson,MECH-T2,exam123,MECH
+Prof. Thomas,AI-T1,exam123,AI
+Prof. Taylor,AI-T2,exam123,AI

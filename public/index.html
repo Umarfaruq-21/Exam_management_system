@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6f8; }
+    header { background:#2c3e50; color:#fff; padding:1rem; text-align:center; }
+    nav { display:flex; background:#34495e; }
+    nav button { flex:1; padding:1rem; color:#fff; border:none; background:#34495e; cursor:pointer; transition:0.3s; }
+    nav button:hover { background:#1abc9c; }
+    section { display:none; padding:1rem; }
+    h2 { margin-top:0; }
+    ul { list-style:none; padding:0; }
+    li { padding:0.3rem 0; }
+    input, select, button { margin:0.3rem 0; padding:0.5rem; }
+    table { width:100%; border-collapse:collapse; margin-top:1rem; }
+    table, th, td { border:1px solid #ccc; }
+    th, td { padding:0.5rem; text-align:left; }
+    .form-group { margin-bottom:0.5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Admin Dashboard</h1>
+</header>
+
+<nav>
+  <button class="panel-btn" data-target="coursesSection">Courses</button>
+  <button class="panel-btn" data-target="examsSection">Exams</button>
+  <button class="panel-btn" data-target="roomsSection">Rooms</button>
+  <button class="panel-btn" data-target="studentsSection">Students</button>
+  <button class="panel-btn" data-target="seatAssignSection">Seat Assignment</button>
+  <button class="panel-btn" data-target="uploadStudentsSection">Upload Students</button>
+</nav>
+
+<!-- ---------------- Courses Section ---------------- -->
+<section id="coursesSection" class="dashboard-section">
+  <h2>Courses</h2>
+  <form id="courseForm">
+    <div class="form-group">
+      <input type="text" id="courseName" placeholder="Course Name" required>
+      <input type="text" id="courseCode" placeholder="Course Code" required>
+      <select id="courseBranch" required>
+        <option value="">Select Branch</option>
+        <option value="CSE">CSE</option>
+        <option value="ISE">ISE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="CIVIL">CIVIL</option>
+        <option value="MECH">MECH</option>
+        <option value="AI">AI</option>
+      </select>
+      <select id="courseSemester" required>
+        <option value="">Select Semester</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+      <button type="submit">Add Course</button>
+    </div>
+  </form>
+  <ul id="coursesList"></ul>
+</section>
+
+<!-- ---------------- Exams Section ---------------- -->
+<section id="examsSection" class="dashboard-section">
+  <h2>Exams</h2>
+  <form id="examForm">
+    <div class="form-group">
+      <select id="examCourse" required></select>
+      <input type="date" id="examDate" required>
+      <input type="time" id="startTime" required>
+      <input type="time" id="endTime" required>
+      <button type="submit">Add Exam</button>
+    </div>
+  </form>
+  <ul id="examsList"></ul>
+</section>
+
+<!-- ---------------- Rooms Section ---------------- -->
+<section id="roomsSection" class="dashboard-section">
+  <h2>Rooms</h2>
+  <form id="roomForm">
+    <div class="form-group">
+      <input type="text" id="roomName" placeholder="Room Name" required>
+      <input type="number" id="roomCapacity" placeholder="Capacity" required>
+      <button type="submit">Add Room</button>
+    </div>
+  </form>
+  <ul id="roomsList"></ul>
+</section>
+
+<!-- ---------------- Students Section ---------------- -->
+<section id="studentsSection" class="dashboard-section">
+  <h2>Students</h2>
+  <div class="form-group">
+    <select id="studentBranch">
+      <option value="">All Branches</option>
+      <option value="CSE">CSE</option>
+      <option value="ISE">ISE</option>
+      <option value="ECE">ECE</option>
+      <option value="EEE">EEE</option>
+      <option value="CIVIL">CIVIL</option>
+      <option value="MECH">MECH</option>
+      <option value="AI">AI</option>
+    </select>
+    <select id="studentSemester">
+      <option value="">All Semesters</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    </select>
+    <select id="studentOddEven">
+      <option value="">All Semesters</option>
+      <option value="odd">Odd Semesters</option>
+      <option value="even">Even Semesters</option>
+    </select>
+    <button id="filterStudents">Filter</button>
+  </div>
+  <ul id="studentsList"></ul>
+</section>
+
+<!-- ---------------- Seat Assignment Section ---------------- -->
+<section id="seatAssignSection" class="dashboard-section">
+  <h2>Seat Assignment</h2>
+
+  <!-- Exam selection & mix branches -->
+  <div class="form-group">
+    <label for="assignExam">Select Exam:</label>
+    <select id="assignExam" required></select>
+    <label>
+      <input type="checkbox" id="mixBranches"> Mix Branches
+    </label>
+    <button id="assignSeatsBtn">Assign Seats</button>
+  </div>
+
+  <!-- Assigned seats table -->
+  <table id="assignedSeatsTable">
+    <thead>
+      <tr>
+        <th>Student USN</th>
+        <th>Student Name</th>
+        <th>Branch</th>
+        <th>Semester</th>
+        <th>Course</th>
+        <th>Exam Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Room</th>
+        <th>Seat Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Populated dynamically by app.js -->
+    </tbody>
+  </table>
+
+  <button id="exportBtn">Export Seating Plan</button>
+</section>
+
+<!-- ---------------- Upload Students Section ---------------- -->
+<section id="uploadStudentsSection" class="dashboard-section">
+  <h2>Upload Students</h2>
+  <form id="uploadStudentsForm">
+    <input type="file" id="studentsFile" accept=".xlsx,.xls,.csv" required>
+    <button type="submit">Upload</button>
+  </form>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* ===================== Global Styles ===================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #34495e;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 5px;
+}
+
+/* ===================== Sections ===================== */
+section {
+  background-color: #ffffff;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===================== Forms & Inputs ===================== */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+  margin: 5px 10px 5px 0;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+/* ===================== Buttons ===================== */
+button {
+  padding: 8px 15px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+
+/* ===================== Lists ===================== */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+li {
+  padding: 5px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+/* ===================== Tables ===================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+td {
+  background-color: #ecf0f1;
+}
+
+tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"],
+  select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+  }
+}
+
+/* ===================== Misc ===================== */
+label {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1,h2 { color: #333; }
+.dashboard-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.panel {
+  background: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.panel:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+.dashboard-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+input, select, button { margin: 5px 10px 5px 0; padding: 5px; }
+ul { list-style: none; padding-left: 0; }
+li { padding: 3px 0; }
+button { cursor: pointer; }

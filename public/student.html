@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Student Dashboard</h1>
+<section>
+  <h2>Welcome, <span id="studentName"></span> (<span id="studentBranch"></span> Sem <span id="studentSemester"></span>)</h2>
+</section>
+
+  <!-- USN Input -->
+  <section>
+    <div class="form-inline">
+      <label>Enter your USN: <input type="text" id="usnInput"></label>
+      <button id="loadSeatsBtn">Load My Schedule</button>
+    </div>
+  </section>
+
+  <!-- Exam Schedule -->
+  <section>
+    <h2>My Exam Schedule</h2>
+    <div class="table-container">
+      <table id="mySeatsTable">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Room</th>
+            <th>Seat</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Notifications -->
+  <section>
+    <h2>Notifications</h2>
+    <ul id="notificationsList"></ul>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

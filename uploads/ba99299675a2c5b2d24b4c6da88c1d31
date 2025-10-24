@@ -1,0 +1,22 @@
+usn,name,branch,semester
+CSE101,Arjun Kumar,CSE,1
+CSE102,Neha Sharma,CSE,2
+CSE103,Rahul Jain,CSE,3
+ISE101,Ananya Singh,ISE,1
+ISE102,Varun Reddy,ISE,2
+ISE103,Megha Patil,ISE,3
+ECE101,Aditya Verma,ECE,1
+ECE102,Priya Kapoor,ECE,2
+ECE103,Rahul Gupta,ECE,3
+EEE101,Sunil Rao,EEE,1
+EEE102,Deepika Reddy,EEE,2
+EEE103,Rohan Mehta,EEE,3
+CIVIL101,Kavya Iyer,CIVIL,1
+CIVIL102,Aravind Kumar,CIVIL,2
+CIVIL103,Anita Sharma,CIVIL,3
+MECH101,Rajesh Singh,MECH,1
+MECH102,Neha Joshi,MECH,2
+MECH103,Sameer Kapoor,MECH,3
+AI101,Ankit Sharma,AI,1
+AI102,Divya Reddy,AI,2
+AI103,Ritika Gupta,AI,3

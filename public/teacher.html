@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Teacher Dashboard</h1>
+
+  <!-- Teacher ID Input -->
+  <section>
+    <div class="form-inline">
+      <label>Enter your Teacher ID: <input type="text" id="teacherId"></label>
+      <button id="loadBlocksBtn">Load My Blocks</button>
+    </div>
+  </section>
+
+  <!-- Assigned Exam Blocks -->
+  <section>
+    <h2>Assigned Exam Blocks</h2>
+    <div class="table-container">
+      <table id="blocksTable">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Room</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
