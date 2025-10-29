@@ -158,7 +158,7 @@ json
 
 🧑‍💻 Author
 
-👨‍💻 Developer: [Umarfaruq](https://github.com/yourusername)
+👨‍💻 Developer: [Umarfaruq](https://github.com/umarfaruq-21)
 📚 Project: "Exam Planning and Seat Allocation System"
 💻 Tech Stack: Node.js, Express, MySQL, HTML, CSS, JS
 🗓️ Year: 2025
