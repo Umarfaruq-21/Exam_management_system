@@ -14,7 +14,7 @@ The Exam Planning and Seat Allocation System simplifies the process of creating 
 Students can log in to view their **exam schedules**, **seat numbers**, and **notifications** in real-time.
 
 🌍 Live Demo
----[View Deployed App]([https://appdost-ui-ayesha.vercel.app/](https://appdost-j96xqrmml-umarfaruqvercel-projects.vercel.app/))
+[View Deployed App](https://appdost-j96xqrmml-umarfaruqvercel-projects.vercel.app/)
 
 🚀 Features
 
