@@ -1,5 +1,8 @@
 🎓 Exam Planning and Seat Allocation System
 
+🌍 Live Demo
+---[View Deployed App]([https://appdost-ui-ayesha.vercel.app/](https://appdost-j96xqrmml-umarfaruqvercel-projects.vercel.app/))
+
 ![Node.js](https://img.shields.io/badge/Node.js-v18+-green?logo=node.js)
 ![Express](https://img.shields.io/badge/Express.js-Backend-black?logo=express)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)
@@ -10,7 +13,7 @@
 
 🏫 Overview
 
-The **Exam Planning and Seat Allocation System** simplifies the process of creating exam timetables, allocating rooms, and assigning seats to students — all from an interactive **Admin Dashboard**.  
+The Exam Planning and Seat Allocation System simplifies the process of creating exam timetables, allocating rooms, and assigning seats to students — all from an interactive **Admin Dashboard**.  
 Students can log in to view their **exam schedules**, **seat numbers**, and **notifications** in real-time.
 
 
